@@ -32,6 +32,17 @@ public class CalculatorTest{
         assertNotEquals(5, calc.add(2, 2));
     }
 
+    @ParameterizedTest
+    @ValueSource(ints = {1, 2, 3, 10, -101, Integer.MAX_VALUE, Integer.MIN_VALUE+1})
+    void test_subtract_method(int num){
+        assertEquals(num-1, calc.subtract(num, 1));
+    }
+
+    @Test
+    void test_subtract_method_not_equals(){
+        assertNotEquals(5, calc.subtract(6, 2));
+    }
+
 
 
 }
