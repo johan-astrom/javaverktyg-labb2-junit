@@ -17,7 +17,7 @@ public class CalculatorTest{
 
     @BeforeEach
     void calcInstance(){
-        calc = new Calculator();
+        this.calc = new Calculator();
     }
 
     @ParameterizedTest
