@@ -1,0 +1,11 @@
+#Test values for toLower method in TextProcessor class.
+#input, result
+TEST, test
+tesT, test
+TEst, test
+HELLO, hello
+123ABC!, 123abc!
+123, 123
+!?, !?
+A B, a b
+

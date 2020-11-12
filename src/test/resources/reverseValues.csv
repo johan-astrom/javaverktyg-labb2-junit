@@ -1,0 +1,7 @@
+#Test values for toLower method in TextProcessor class.
+#input, result
+abcdef, fedcba
+ABCDEF, FEDCBA
+a b c, c b a
+abc123, 321cba
+!?, ?!
