@@ -54,6 +54,19 @@ public class TextProcessorTest{
         assertTrue(textProcessor.toLower(s).isBlank(), "Should return true for blank strings");
     }
 
+    @ParameterizedTest
+    @CsvFileSource(resources = "/reverseValues.csv")
+    void test_reverse(String input, String result){
+        assertEquals(result, textProcessor.reverse(input));
+    }
+
+    @ParameterizedTest
+    @EmptySource
+    @ValueSource(strings = {" ", "\t", "\n"})
+    void test_reverse_empty(String s){
+        assertTrue(textProcessor.reverse(s).isBlank(), "Should return true for blank strings");
+    }
+
     
     
     
