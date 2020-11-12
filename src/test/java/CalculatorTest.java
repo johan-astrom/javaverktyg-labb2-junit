@@ -79,6 +79,9 @@ public class CalculatorTest{
         assertEquals((3-2)+(2*2), calc.add(calc.subtract(3,2), calc.multiply(2, 2)));
     }
 
-
+    @AfterAll
+    static void messageAfter(){
+        System.out.println("Calculator tests completed.");
+    }
 
 }
