@@ -23,23 +23,37 @@ public class TextProcessorTest{
     }
 
     @ParameterizedTest
+    @NullSource
+    void test_null(String s){
+        assertNull(s, "String should be null");
+    }
+
+    @ParameterizedTest
     @CsvFileSource(resources = "/toUpperValues.csv")
     void test_toUpper(String input, String result){
         assertEquals(result, textProcessor.toUpper(input));
     }
 
     @ParameterizedTest
-    @NullSource
-    void test_toUpper_null(String s){
-        assertNull(s, "String should be null");
+    @EmptySource
+    @ValueSource(strings = {" ", "\t", "\n"})
+    void test_toUpper_empty(String s){
+        assertTrue(textProcessor.toUpper(s).isBlank(), "Should return true for blank strings");
+    }
+
+    @ParameterizedTest
+    @CsvFileSource(resources = "/toLowerValues.csv")
+    void test_toLower(String input, String result){
+        assertEquals(result, textProcessor.toLower(input));
     }
 
     @ParameterizedTest
     @EmptySource
     @ValueSource(strings = {" ", "\t", "\n"})
-    void test_toUpper_empty(String s){
-        assertTrue(s.isBlank(), "Should return true for blank strings");
+    void test_toLower_empty(String s){
+        assertTrue(textProcessor.toLower(s).isBlank(), "Should return true for blank strings");
     }
+
     
     
     
