@@ -48,6 +48,12 @@ public class TextProcessorTest {
     }
 
     @ParameterizedTest
+    @NullSource
+    void test_to_upper_null(String s) {
+        assertThrows(NullPointerException.class, () -> textProcessor.toUpper(s));
+    }
+
+    @ParameterizedTest
     @CsvFileSource(resources = "/toLowerValues.csv")
     void test_toLower(String input, String result) {
         assertEquals(result, textProcessor.toLower(input));
@@ -58,6 +64,12 @@ public class TextProcessorTest {
     @ValueSource(strings = {" ", "\t", "\n"})
     void test_toLower_empty(String s) {
         assertTrue(textProcessor.toLower(s).isBlank(), "Should return true for blank strings");
+    }
+
+    @ParameterizedTest
+    @NullSource
+    void test_to_lower_null(String s) {
+        assertThrows(NullPointerException.class, () -> textProcessor.toLower(s));
     }
 
     @ParameterizedTest
