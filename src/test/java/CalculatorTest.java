@@ -72,6 +72,12 @@ public class CalculatorTest{
         assertNotEquals(5.3, calc.divide(6.234, 2.34));
     }
 
+    @Test
+    @DisplayName("Test exception")
+    void test_exception(){
+        assertThrows(NumberFormatException.class, () -> calc.add(Integer.parseInt("a"), 2));
+    }
+
     @Disabled
     @Test
     @DisplayName("Cross-method test")
