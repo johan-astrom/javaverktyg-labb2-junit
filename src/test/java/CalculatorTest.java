@@ -79,6 +79,13 @@ public class CalculatorTest{
     }
 
     @Disabled
+    @DisplayName("Check test speed")
+    @RepeatedTest(10000)
+    void repeated_test(){
+        calc.multiply(Integer.MAX_VALUE/2, 2);
+    }
+
+    @Disabled
     @Test
     @DisplayName("Cross-method test")
     void cross_method_test(){
