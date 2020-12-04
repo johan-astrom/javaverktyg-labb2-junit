@@ -1,5 +1,5 @@
 #Gitignore for javaverktyg-labb2-junit by Johan Åström
-.idea
+.idea/
 *.DS_Store
 *.swp
 target/
