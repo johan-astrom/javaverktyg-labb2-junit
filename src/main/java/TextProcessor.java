@@ -12,7 +12,7 @@ public String reverse(String s){
 StringBuilder sb = new StringBuilder();
 return sb.append(s).reverse().toString();
 }
-    erroneous code4 after mail settings update in Jenkins 2
+    erroneous code4 after mail settings update in Jenkins 3
 
 
 }
