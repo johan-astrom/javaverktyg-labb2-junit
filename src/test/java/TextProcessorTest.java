@@ -91,5 +91,4 @@ public class TextProcessorTest {
         System.out.println("TextProcessor tests completed.");
     }
 //Testing jenkins webhook SUCCESS with e-mail
-    erroneous code
 }
