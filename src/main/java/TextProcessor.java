@@ -11,8 +11,6 @@ return s.toLowerCase();
 public String reverse(String s){
 StringBuilder sb = new StringBuilder();
 return sb.append(s).reverse().toString();
-
-erroneous code day 2 (2)
 }
 
 }
